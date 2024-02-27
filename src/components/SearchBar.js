@@ -1,6 +1,7 @@
 import React from "react";
 
 const SearchBar = ({ handleSearch, setPageNumber }) => {
+  //props obtained though out main.js
   return (
     <form className="d-flex" role="search">
       <input
@@ -12,7 +13,13 @@ const SearchBar = ({ handleSearch, setPageNumber }) => {
           setPageNumber(1);
           handleSearch(e.target.value);
         }}
-       
+
+        // input searchbar. It will respond to on change effect. 
+        //this onchange is waiting for an event to happen. That event, which value is being targeted, 
+        // will modify setSearch though out handleSearch. 
+
+        // we also want setPageNumber to be updated to one. Because, once the value has been obtained, 
+        // we want our pagination to render the data obtained from page 1. 
       />
     </form>
   );

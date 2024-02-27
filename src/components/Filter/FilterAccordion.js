@@ -4,7 +4,9 @@ import Gender from "./Gender";
 import Species from "./Species";
 
 const FilterAccordion = ({handleGender, handleSpecie, handleStatus, setPageNumber}) => {
+  // handlers pass through main.js 
   return (
+    // we display an accordion with the buttons Status, species and gender. 
     <div className="accordion" id="accordionExample">
       <div className="accordion-item">
         <h2 className="accordion-header" id="headingOne">
