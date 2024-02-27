@@ -1,6 +1,6 @@
 // En App.js
 
-import React, { useState } from "react";
+import React from "react";
 import "./styles/App.css";
 import { Routes, Route } from "react-router-dom";
 import Main from "./pages/Main";
@@ -13,8 +13,8 @@ import AppContextProvider from "./context/AppContext";
 function App() {
   return (
     <div className="App">
-      <Navbar />
       <AppContextProvider>
+      <Navbar />
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/favorites" element={<Favorites />} />

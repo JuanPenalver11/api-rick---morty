@@ -10,7 +10,7 @@ const Details = () => {
 
   const [details, setDetails] = useState({});
 
-  const {addFavorite} = useAppContext();
+  const {addFavorite, alreadyFav} = useAppContext();
   
 
   let { id } = useParams();
@@ -39,7 +39,7 @@ const Details = () => {
       <div className="row">
         <div className="col-2"></div>
         <div className="col-8 d-flex justify-content-center">
-          <CardDetail details = { details } addFavorite = { addFavorite }/>
+          <CardDetail details = { details } addFavorite = { addFavorite } alreadyFav = {alreadyFav}/>
         </div>
         <div className="col-2"></div>
       </div>

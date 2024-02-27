@@ -6,6 +6,7 @@ const Favorites = () => {
 
   const {favoriteList, removeFavorite} = useAppContext();
 
+
   return (
   <div className="container">
     <div className="row">

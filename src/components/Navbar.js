@@ -1,7 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useAppContext } from "../context/AppContext";
 
 const Navbar = () => {
+
+  const { favoriteCount } = useAppContext();
+ 
   return (
     <NavLink  className="navbar navbar-expand-lg bg-body-tertiary">
   <div  className="container-fluid">
@@ -11,7 +15,7 @@ const Navbar = () => {
     </button>
     <div  className="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div  className="navbar-nav">
-        <NavLink   className="nav-link active" aria-current="page" to="/favorites">Favorites</NavLink >
+        <NavLink   className="nav-link active" aria-current="page" to="/favorites">Favorites<span> ...{favoriteCount}</span></NavLink >
       </div>
     </div>
   </div>

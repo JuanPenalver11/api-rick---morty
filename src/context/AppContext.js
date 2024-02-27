@@ -24,8 +24,17 @@ const AppContextProvider = ({children}) => {
 
     };
 
+    const favoriteCount = favoriteList.length
+
+    const alreadyFav = (id) =>{
+        return favoriteList.some((item => {
+            return item.id === id
+        }))
+}
+
+
     return (
-        <AppContext.Provider value={{favoriteList, addFavorite, removeFavorite}}>
+        <AppContext.Provider value={{favoriteList, addFavorite, removeFavorite, favoriteCount, alreadyFav}}>
             {children}
         </AppContext.Provider>
     )
