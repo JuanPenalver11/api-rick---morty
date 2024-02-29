@@ -1,0 +1,28 @@
+.card-favorite{
+    height: 225px;
+    width: 500px;
+    border-radius: 5px;
+    border: solid black 1px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.image-favorite{
+    border-radius: 5px;
+    width: 200px;
+    margin-right: 20px;
+}
+
+.name-favorite{
+    margin-right: 20px;
+}
+
+.btn-favorite{
+    background-color: white;
+    border: none;
+}
+
+.fa-circle-xmark{
+    font-size: 40px;
+}

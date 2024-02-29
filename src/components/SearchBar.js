@@ -1,9 +1,10 @@
 import React from "react";
+import '../styles/SearchBar.css'
 
 const SearchBar = ({ handleSearch, setPageNumber }) => {
   //props obtained though out main.js
   return (
-    <form className="d-flex" role="search">
+    <form className="searchBar d-flex my-4" role="search">
       <input
         className="form-control me-2"
         type="search"

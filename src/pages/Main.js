@@ -39,20 +39,31 @@ const Main = () => {
 
   const URL_API = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}&gender=${gender}&species=${specie}&status=${status}`;
 
-  //url writen  with template literal as page, name, gender, species and status will be modified. 
+  //url writen  with template literal as page, name, gender, species and status will are mutable. 
   useEffect(() => {
     //Asyncrhonous function that will get the data from the url above. 
     async function getData() {
       try {
         const response = await fetch(URL_API);
-
         if (!response.ok) {
-          throw Error("Response not ok");
+          throw Error("Failed to fetch data");
         }
-        const data = await response.json();
-        setData(data);
+        const contentType = response.headers.get("content-type");
+        //this line retrieves information from the response object and it refers to the header
+        //because the header typically indicates the type of content. 
+        if (contentType && contentType.includes("application/json")) {
+        // here we are checking whether contentType exist and if has raw JSON. 
+          const data = await response.json();
+        //if the answer is afirmative then parse the raw JSON into JavaScript object with json()
+          setData(data);
+        // update fetchedData
+        } else {
+          throw Error("Response is not in JSON format");
+          // if the HTTP answer doesn't have JSON then through the Error above
+        }
       } catch (error) {
-        console.log("Error", error);
+        console.error("Error fetching data:", error);
+        // Handle error here, e.g., display an error message to the user
       }
     }
     getData();
@@ -81,6 +92,9 @@ const Main = () => {
   return (
     // addind our components to the main page
     <div className="container">
+      <br />
+      <br />
+      <br />
       <SearchBar handleSearch={handleSearch} setPageNumber={setPageNumber} />
       <div className="row">
         <div className="col-3">
@@ -91,7 +105,7 @@ const Main = () => {
             setPageNumber={setPageNumber}
           />
         </div>
-        <div className="col-7">
+        <div className="col-9">
           <div className="row justify-content-center">
             <Card results={results} />
           </div>

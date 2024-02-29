@@ -49,7 +49,7 @@ const Details = () => {
           throw Error ('Details no available')
         }
         // nonetheless, if there ain't errors then transform response into a language that my app can read
-        // wait until all the information is translated and then pass it through setDails. 
+        // wait until all the information is translated and then pass it through setDetails. 
         const data = await response.json();
         setDetails(data)
       } catch(error){

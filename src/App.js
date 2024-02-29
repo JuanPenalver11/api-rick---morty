@@ -1,14 +1,18 @@
-// En App.js
 
 import React from "react";
-import "./styles/App.css";
 import { Routes, Route } from "react-router-dom";
+import AppContextProvider from "./context/AppContext";
+//React 
 import Main from "./pages/Main";
 import Favorites from "./pages/Favorites";
 import Details from "./pages/Details";
+import Game from "./pages/Game";
+//Pages
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import AppContextProvider from "./context/AppContext";
+// Components
+import "./styles/App.css";
+
+
 
 //In App we set up the routes of our app. For that we'll use Routes and Route that are connected
 // whit BrowserRouter, being BrowserRouter the parent. 
@@ -31,9 +35,9 @@ function App() {
           <Route path="/" element={<Main />} />
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/details/:id" element={<Details />} />
+          <Route path= "/game" element={<Game />}/>
         </Routes>
       </AppContextProvider>
-      <Footer />
     </div>
   );
 }

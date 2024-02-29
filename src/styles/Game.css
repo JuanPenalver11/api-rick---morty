@@ -1,0 +1,43 @@
+.container-game {
+    position: relative;
+    top: 200px;
+    width: 100%;
+}
+
+.card-game {
+    width: 25%;
+    border: 1px solid black; /* corrected border syntax */
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute; /* changed to absolute positioning */
+    left: 50%; /* adjusted left position */
+    transform: translateX(-50%); /* centered horizontally */
+}
+
+.card-button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 5px;
+}
+
+.computerCount {
+    position: absolute;
+    right: 500px; /* adjusted right position */
+    top: 0; /* added top position */
+    width: 100%;
+}
+
+.playerCount {
+    position: absolute;
+    left: 500px; /* adjusted left position */
+    top: 0; /* added top position */
+    width: 100%;
+}
+
+.fa-square-check{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    margin: 20px 0 20px 0;
+}

@@ -7,16 +7,17 @@ const FilterAccordion = ({handleGender, handleSpecie, handleStatus, setPageNumbe
   // handlers pass through main.js 
   return (
     // we display an accordion with the buttons Status, species and gender. 
-    <div className="accordion" id="accordionExample">
+    <div className="accordion mt-5" id="accordionExample">
       <div className="accordion-item">
         <h2 className="accordion-header" id="headingOne">
           <button
-            className="accordion-button"
+            className="accordion-button fs-12"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#collapseOne"
             aria-expanded="true"
             aria-controls="collapseOne"
+
           >
             Status
           </button>
@@ -39,6 +40,7 @@ const FilterAccordion = ({handleGender, handleSpecie, handleStatus, setPageNumbe
             data-bs-target="#collapseTwo"
             aria-expanded="false"
             aria-controls="collapseTwo"
+            styles={{fontSize:'30px'}}
           >
             Gender
           </button>

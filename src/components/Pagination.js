@@ -7,13 +7,13 @@ const Pagination = ({ setPageNumber, info, pageNumber }) => {
   return (
   
   <ReactPaginate
-  pageCount ={info?.pages}
+  pageCount ={info ? Math.ceil(info.pages) : 1} 
   // Page count refers to the amount of pages that will be display. 
   pageRangeDisplayed = '3'
   // Number of pages that will be display. 3 is the min.
   className = 'pagination justify-content-center my-4 gap-4'
   previousLabel = 'Prev'
-  previousClassName="btn btn-secondary"
+  previousClassName="btn btn-warning"
   nextLabel = 'Next'
   nextClassName="btn btn-warning"
   pageClassName="page-item"

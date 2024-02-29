@@ -17,12 +17,10 @@ const Favorites = () => {
 
   return (
   <div className="container">
-    <div className="row">
-      <div className="col-3"></div>
-      <div className="col-6">
+    <div className="row ">
+      <div className="col-12 d-flex justify-content-center align-content-center ms-5">
         <FavoriteDisplay favoriteList = {favoriteList} removeFavorite = {removeFavorite}/>
       </div>
-      <div className="col-3"></div>
     </div>
   </div>
   )
