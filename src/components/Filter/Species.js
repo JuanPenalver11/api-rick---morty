@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 const Species = ({ handleSpecie, setPageNumber }) => {
   let species = [
@@ -15,6 +15,12 @@ const Species = ({ handleSpecie, setPageNumber }) => {
     "Planet",
   ];
   // we have created an array of names
+  const [selectedSpecie, setSelectedSpecie] = useState('')
+
+  const active = (arg) =>{
+    setSelectedSpecie(arg)
+  }
+
   return (
     <div className="accordion-body d-flex flex-wrap">
       {species.map((specie, index) => {
@@ -25,12 +31,16 @@ const Species = ({ handleSpecie, setPageNumber }) => {
         // this will affect the url and the useEffect will he triggered rendering new information.
         return (
           <button
+            type="button"
+            className={`btn btn-outline-primary m-2 ${selectedSpecie === specie ? 'active' : ''}`}
+            data-bs-toggle="button"
+            aria-pressed="true"
             key={index}
             onClick={() => {
               setPageNumber(1);
               handleSpecie(specie);
+              active(specie)
             }}
-            className="btn btn-primary m-2"
           >
             {specie}
           </button>

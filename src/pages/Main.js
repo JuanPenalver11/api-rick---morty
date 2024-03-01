@@ -10,6 +10,7 @@ import SearchBar from "../components/SearchBar";
 import Pagination from "../components/Pagination";
 import FilterAccordion from "../components/Filter/FilterAccordion";
 //components we'll use.
+import '../styles/Main.css'
 
 const Main = () => {
 
@@ -91,13 +92,13 @@ const Main = () => {
 
   return (
     // addind our components to the main page
-    <div className="container">
+    <div className="container main">
       <br />
       <br />
       <br />
       <SearchBar handleSearch={handleSearch} setPageNumber={setPageNumber} />
       <div className="row">
-        <div className="col-3">
+        <div className="col-sm-12 col-lg-3 mb-5">
           <FilterAccordion
             handleGender={handleGender}
             handleSpecie={handleSpecie}
@@ -105,7 +106,7 @@ const Main = () => {
             setPageNumber={setPageNumber}
           />
         </div>
-        <div className="col-9">
+        <div className=" col-sm-12 col-lg-9">
           <div className="row justify-content-center">
             <Card results={results} />
           </div>

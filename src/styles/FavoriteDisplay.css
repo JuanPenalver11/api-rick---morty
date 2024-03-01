@@ -1,28 +1,33 @@
-.card-favorite{
-    height: 225px;
-    width: 500px;
-    border-radius: 5px;
-    border: solid black 1px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
+.card-favorite {
+  height: 225px;
+  width: 500px;
+  border-radius: 5px;
+  border: solid black 1px;
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
+  background-color: white;
 }
 
-.image-favorite{
-    border-radius: 5px;
-    width: 200px;
-    margin-right: 20px;
+.image-favorite {
+  border-radius: 5px;
+  width: 200px;
+  margin-right: 20px;
 }
 
-.name-favorite{
-    margin-right: 20px;
+.btn-favorite {
+  background-color: white;
+  border: none;
 }
 
-.btn-favorite{
-    background-color: white;
-    border: none;
+.fa-circle-xmark {
+  font-size: 40px;
+  margin-left: 10px;
 }
 
-.fa-circle-xmark{
-    font-size: 40px;
+@media (max-width:676px ){
+  .card-favorite{
+    width: 400px;
+    margin-left: 40px;
+  }
 }

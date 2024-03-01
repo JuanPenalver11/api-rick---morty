@@ -1,8 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 
 const Status = ({ setPageNumber, handleStatus }) => {
   let status = ["Alive", "Dead", "Unknown"];
   // we have created an array of names
+  const [selecetedStatus, setSelectedStatus] = useState('')
+
+  const active = (arg) =>{
+    setSelectedStatus(arg)
+  }
   return (
     <div className="accordion-body">
       {status.map((state, index) => {
@@ -13,12 +18,17 @@ const Status = ({ setPageNumber, handleStatus }) => {
         // this will affect the url and the useEffect will he triggered rendering new information.
         return (
           <button
+            type="button"
+            className={`btn btn-outline-primary m-2 ${selecetedStatus === state ? 'active' : ''}`}
+            data-bs-toggle="button"
+            aria-pressed="true"
             key={index}
             onClick={() => {
               setPageNumber(1);
               handleStatus(state);
+              active(state)
             }}
-            className="btn btn-primary m-2"
+           
           >
             {state}
           </button>

@@ -18,7 +18,7 @@ const Card = ({ results }) => {
         let { image, name, location, id } = result;
         // we destructure result to withdraw the information we want.
         return (
-          <div className="col-4 mb-3">
+          <div className="col-12 col-md-6 col-lg-4 mb-3">
             {/* key is very important */}
            
               <Link

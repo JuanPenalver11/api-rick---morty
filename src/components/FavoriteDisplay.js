@@ -9,14 +9,14 @@ import '../styles/FavoriteDisplay.css'
 const FavoriteDisplay = ({ favoriteList, removeFavorite  }) => {
   // we obtain favoriteList and removeFavorite from main.js
   return (
-    <div className="row" style={{marginTop:'100px'}}>
+    <div className="row justify-content-center" style={{position:'relative', top:'100px'}} >
       {favoriteList.length > 0 ? (
         // if favoriteList length is higher than 0,  map favoriteList and construct a div with assigned information.
         favoriteList.map(item => {
           let { image, name, id } = item;
           //  Information is obtained from the destructuration of item. 
           return (
-            <div className="card-favorite col-6 mx-5 my-3" key={id}>
+            <div className="card-favorite me-5 my-3 col-sm-12 col-md-6 col-lg-6" key={id}>
               <img className="image-favorite" src={image} alt={name} />
               <h3 className="name-favorite">{name}</h3>
               <button onClick={() => {removeFavorite(id)}} className='btn-favorite'><i class="fa-solid fa-circle-xmark"></i></button>

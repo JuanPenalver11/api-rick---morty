@@ -2,6 +2,7 @@ import React from "react";
 import Status from "./Status";
 import Gender from "./Gender";
 import Species from "./Species";
+import '../../styles/FilterAccordion.css'
 
 const FilterAccordion = ({handleGender, handleSpecie, handleStatus, setPageNumber}) => {
   // handlers pass through main.js 
@@ -11,7 +12,7 @@ const FilterAccordion = ({handleGender, handleSpecie, handleStatus, setPageNumbe
       <div className="accordion-item">
         <h2 className="accordion-header" id="headingOne">
           <button
-            className="accordion-button fs-12"
+            className="accordion-button"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#collapseOne"
@@ -40,7 +41,6 @@ const FilterAccordion = ({handleGender, handleSpecie, handleStatus, setPageNumbe
             data-bs-target="#collapseTwo"
             aria-expanded="false"
             aria-controls="collapseTwo"
-            styles={{fontSize:'30px'}}
           >
             Gender
           </button>

@@ -1,0 +1,31 @@
+
+ 
+  
+  .pagination .page-link {
+    color: #000;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 5px;
+  }
+  
+  .pagination .page-link:hover {
+    background-color: #f0f0f0;
+  } 
+  
+  @media (max-width: 768px) {
+    .pagination {
+      flex-wrap: wrap;
+    }
+  
+    .pagination .page-item {
+      margin: 5px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .pagination .page-link {
+      padding: 5px 8px;
+    }
+  }
+  

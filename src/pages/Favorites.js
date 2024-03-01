@@ -6,6 +6,7 @@ import FavoriteDisplay from '../components/FavoriteDisplay'
 // We import FavoriteDisplay component
 import { useAppContext } from '../context/AppContext'
 //We import useAppContext from AppContext to be able to use the functions we have developped. 
+import '../styles/Favorites.css'
 
 const Favorites = () => {
 
@@ -16,12 +17,10 @@ const Favorites = () => {
 //We pass favoriteList array and removeFavorite function as props through FavoriteDisplay component. 
 
   return (
-  <div className="container">
-    <div className="row ">
-      <div className="col-12 d-flex justify-content-center align-content-center ms-5">
-        <FavoriteDisplay favoriteList = {favoriteList} removeFavorite = {removeFavorite}/>
-      </div>
-    </div>
+  <div className="container-favorites text-center">
+    
+          <FavoriteDisplay favoriteList = {favoriteList} removeFavorite = {removeFavorite}/>
+  
   </div>
   )
 }

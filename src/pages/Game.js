@@ -89,7 +89,7 @@ const Game = () => {
   return (
     <div className="container-game">
       <div className="row">
-        <div className="col-12">
+        <div className="col-lg-8 col-md-10 col-sm-12 mx-auto">
           <div className="card-game">
           <span class="badge rounded-pill bg-danger computerCount fs-4">
           Computer count: {countComputer}

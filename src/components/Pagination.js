@@ -1,6 +1,7 @@
 import React from "react"; 
 import ReactPaginate from "react-paginate";
 //ReactPaginate is library from react-paginate 
+import '../styles/Pagination.css'
 
 const Pagination = ({ setPageNumber, info, pageNumber }) => {
 //we obtain setPageNumber, pageNumber and info from main.js
@@ -13,9 +14,9 @@ const Pagination = ({ setPageNumber, info, pageNumber }) => {
   // Number of pages that will be display. 3 is the min.
   className = 'pagination justify-content-center my-4 gap-4'
   previousLabel = 'Prev'
-  previousClassName="btn btn-warning"
+  previousClassName="btn btn-warning prev"
   nextLabel = 'Next'
-  nextClassName="btn btn-warning"
+  nextClassName="btn btn-warning next"
   pageClassName="page-item"
   //refers to the anchor from pagination in bootstrap code 
   pageLinkClassName= "page-link"

@@ -6,7 +6,7 @@ const SearchBar = ({ handleSearch, setPageNumber }) => {
   return (
     <form className="searchBar d-flex my-4" role="search">
       <input
-        className="form-control me-2"
+        className="form-control fs-4"
         type="search"
         placeholder="Enter Character Name"
         aria-label="Search"
